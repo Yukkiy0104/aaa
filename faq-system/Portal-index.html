@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社のポータルサイト</title>
+    <link rel="stylesheet" href="./Portal/Portal-style.css">
+</head>
+<body>
+    <header>
+        <h1>会社のポータルサイト</h1>
+
+        <div class="search-container">
+            <input type="text" id="search-box" placeholder="検索...">
+            <div id="search-results" class="dropdown-content"></div>
+        </div>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#purpose">会社の目的</a></li>
+            <li><a href="#goals">会社の目標</a></li>
+            <li><a href="#weekly-topic">今週のTopic</a></li>
+            <li><a href="#monthly-topic">月間Topic</a></li>
+            <li><a href="#rules">ルール</a></li>
+            <li><a href="#qa">Q＆A</a></li>
+        </ul>
+        
+    </nav>
+    <main>
+        <section id="purpose">
+            <h2>会社の目的</h2>
+            <p>ここに会社の目的を記載します。</p>
+        </section>
+        <section id="goals">
+            <h2>会社の目標</h2>
+            <p>ここに会社の目標を記載します。</p>
+        </section>
+        <div class="topics-container">
+            <section id="weekly-topic">
+                <h2>今週のTopic</h2>
+                <div id="weekly-topics">
+                    <p><a href="./pdf">マニュアル更新について　24/12月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/11月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/10月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/9月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/8月更新</a></p>
+                    <div id="more-weekly-topics" style="display: none;">
+                        <p><a href="./pdf">マニュアル更新について　24/7月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/6月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/5月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/4月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/3月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/2月更新</a></p>
+                    </div>
+                </div>
+                <button id="show-more-weekly">もっと見る</button>
+            </section>
+            <section id="monthly-topic">
+                <h2>月間Topic</h2>
+                <div id="monthly-topics">
+                    <p><a href="./pdf">マニュアル更新について　24/12月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/11月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/10月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/9月更新</a></p>
+                    <p><a href="./pdf">マニュアル更新について　24/8月更新</a></p>
+                    <div id="more-monthly-topics" style="display: none;">
+                        <p><a href="./pdf">マニュアル更新について　24/7月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/6月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/5月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/4月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/3月更新</a></p>
+                        <p><a href="./pdf">マニュアル更新について　24/2月更新</a></p>
+                    </div>
+                </div>
+                <button id="show-more-monthly">もっと見る</button>
+            </section>
+        </div>
+        <section id="rules">
+            <h2>ルール</h2>
+            <p>ここに会社のルールを記載します。</p>
+        </section>
+        <section id="qa">
+            <h2>Q＆A</h2>
+            <p>ここにQ＆Aを記載します。</p>
+        </section>
+    </main>
+<!--    
+    <footer>
+        <p>© 2024 会社名. All rights reserved.</p>
+    </footer>
+-->
+    <script src="./Portal/Portal-script.js"></script>
+</body>
+</html>
