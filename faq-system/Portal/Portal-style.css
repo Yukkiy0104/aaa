@@ -12,6 +12,7 @@ header {
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* 検索結果を正しく表示するために追加 */
 }
 
 nav {
@@ -75,7 +76,7 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#show-more-weekly, #show-more-monthly {
+#show-more-weekly, #show-more-monthly, #show-more-past {
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -85,22 +86,67 @@ footer {
     transition: background-color 0.3s;
 }
 
-#show-more-weekly:hover, #show-more-monthly:hover {
+#show-more-weekly:hover, #show-more-monthly:hover, #show-more-past:hover {
     background-color: #45a049;
 }
 
-.topics-container {
+.topics-row {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
 }
 
 #weekly-topic, #monthly-topic {
     width: 48%;
 }
 
+#past-topics {
+    margin-top: 2rem; /* トピックの下に配置 */
+}
+
+
 .search-container {
-    position: relative;
-    display: inline-block;
+    position: fixed; /* 画面に固定 */
+    right: 0; /* 右側に配置 */
+    top: 20px; /* 上からの距離 */
+    width: 300px; /* コンテナの幅 */
+    background-color: #f9f9f9; /* 背景色 */
+    border: 1px solid #ccc; /* 枠線 */
+    padding: 10px; /* 内側の余白 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 影 */
+    z-index: 1000; /* 他の要素より前面に表示 */
+    margin-bottom: 20px;
+}
+
+#tag-dropdown {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#search-button, #tag-select-button, #tag-reset-button {
+    padding: 5px 10px;
+    width: calc(33.33% - 6.66px); /* ボタンの幅を3分の1に */
+    background-color: #007bff; /* 背景色 */
+    color: #fff; /* 文字色 */
+    border: none; /* 枠線なし */
+    border-radius: 4px; /* 角丸 */
+    cursor: pointer; /* カーソル */
+    display: inline-block; /* 横並びにする */
+    margin-right: 5px; /* 隣のボタンとの間隔 */
+}
+
+#search-button:hover, #tag-select-button:hover, #tag-reset-button:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+#tag-search-box, #word-search-box {
+    width: calc(100% - 20px); /* 入力フィールドの幅 */
+    padding: 10px; /* 内側の余白 */
+    margin-bottom: 10px; /* 下の余白 */
+    border: 1px solid #ccc; /* 枠線 */
+    border-radius: 4px; /* 角丸 */
+    box-sizing: border-box; /* ボックスサイズの計算 */
 }
 
 #search-box {
@@ -113,8 +159,12 @@ footer {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 200px;
+    max-height: 200px; /* 最大高さを設定 */
+    overflow-y: auto; /* スクロールを有効にする */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    top: 100%; /* 検索窓の下に表示 */
+    right: 0;
 }
 
 .dropdown-content a {
@@ -126,4 +176,22 @@ footer {
 
 .dropdown-content a:hover {
     background-color: #ddd;
+}
+
+.tags {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 2px 5px;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    cursor: pointer; 
 }
